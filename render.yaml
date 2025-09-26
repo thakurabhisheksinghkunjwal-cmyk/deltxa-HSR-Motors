@@ -2,8 +2,8 @@ services:
   - type: web
     name: lead-management-app
     env: node
-    buildCommand: npm install && npm run build
-    startCommand: npm start
+    buildCommand: npm install && npx vite build
+    startCommand: npx vite preview --port $PORT --host 0.0.0.0
     envVars:
       - key: NODE_ENV
         value: production
